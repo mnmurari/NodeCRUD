@@ -83,4 +83,4 @@ router.delete('/:idUsuario', async (req, res) => {
 });
 
 
-module.exports = app => app.use('/usuario', router);
+module.exports = router;
