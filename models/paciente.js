@@ -1,29 +1,29 @@
-const conexao  = require('../database/index');
+const conexao = require('../database/index');
 
 const Paciente = conexao.sequelize.define('pacientes', {
-    id:{
+    id: {
         type: conexao.Sequelize.INTEGER,
         autoIncrement: true,
         allowNull: false,
         primaryKey: true
     },
-    nome:{
+    nome: {
         type: conexao.Sequelize.STRING,
         allowNull: false
     },
-    cpf:{
-        type: conexao.Sequelize.STRING,
-        allowNull: false
-    },    
-    email:{
+    cpf: {
         type: conexao.Sequelize.STRING,
         allowNull: false
     },
-    nascimento:{
+    email: {
+        type: conexao.Sequelize.STRING,
+        allowNull: false
+    },
+    nascimento: {
         type: conexao.Sequelize.DATE,
         allowNull: false,
     },
-    etina:{
+    etina: {
         type: conexao.Sequelize.STRING,
         allowNull: false
     }

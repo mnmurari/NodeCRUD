@@ -1,27 +1,27 @@
-const conexao  = require('../database/index');
+const conexao = require('../database/index');
 const bcrypt = require("bcryptjs");
 
 const Usuario = conexao.sequelize.define('usuarios', {
-    id:{
+    id: {
         type: conexao.Sequelize.INTEGER,
         autoIncrement: true,
         allowNull: false,
         primaryKey: true
     },
-    nome:{
+    nome: {
         type: conexao.Sequelize.STRING,
         allowNull: false
     },
-    email:{
+    email: {
         type: conexao.Sequelize.STRING,
         allowNull: false,
         unique: true
     },
-    senha:{
+    senha: {
         type: conexao.Sequelize.STRING,
         allowNull: false,
     },
-    nivel:{
+    nivel: {
         type: conexao.Sequelize.INTEGER,
         allowNull: false
     }
